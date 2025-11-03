@@ -1,0 +1,43 @@
+
+# This file lists the Python libraries required to run the Stock Price Prediction Streamlit application (ml.py).
+# It is used by package managers (like pip) and deployment platforms (like Streamlit Cloud) 
+# to automatically install dependencies.
+
+streamlit
+pandas
+numpy
+yfinance
+scikit-learn
+matplotlib
+🚀 Step-by-Step Implementation Process
+Follow these steps to ensure your project is properly configured for deployment and sharing:
+
+Step 1: Create and Save the File
+Create a new plain text file named requirements.txt.
+
+Paste the content provided above into this file.
+
+Crucial Location: Save this file in the root directory (the main folder) of your project, alongside your Python application script (ml.py).
+
+Step 2: Test Locally (Optional but Recommended)
+You can verify that this file works correctly by creating a brand-new virtual environment and installing packages from the file:
+
+Deactivate your current environment (deactivate).
+
+Delete your old environment (rm -rf .venv or delete the folder manually).
+
+Create a new one (python -m venv testenv).
+
+Activate the new one (source testenv/bin/activate or .\testenv\Scripts\Activate.ps1).
+
+Install using the file:
+
+Bash
+
+pip install -r requirements.txt
+Step 3: Deployment (GitHub & Streamlit Cloud)
+Commit Changes: Ensure both your main script (ml.py) and the new requirements.txt file are committed and pushed to your GitHub repository.
+
+Redeploy: On Streamlit Cloud, go to your app settings and trigger a redeploy (or simply wait if automatic deployment is enabled).
+
+Streamlit Cloud will look for the requirements.txt file and execute the equivalent of the pip install -r requirements.txt command, resolving the ModuleNotFoundError.
